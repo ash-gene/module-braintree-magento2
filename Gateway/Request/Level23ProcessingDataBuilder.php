@@ -94,7 +94,7 @@ class Level23ProcessingDataBuilder implements BuilderInterface
         foreach ($order->getItems() as $item) {
 
             // Skip configurable parent items and items with a base price of 0.
-            if ($item->getParentItem() || 0.0 === $item->getPrice()) {
+            if ($item->getParentItem() || 0.0 === (float)$item->getPrice()) {
                 continue;
             }
 
